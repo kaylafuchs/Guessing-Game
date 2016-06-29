@@ -1,1 +1,175 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 
+h1 {
+  font-family: 'Pacifico', serif;
+  font-weight: 800;
+  margin: 5px auto;
+  font-size: 35px;
+}
+
+h2 {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+#headlines {
+  margin: 70px auto 20px auto;
+  width: 350px;
+  text-align: center;
+}
+
+input {
+  width: 198px;
+  height: 50px;
+  display: block;
+  margin: 20px auto 0px auto;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  background-color: #FFF;
+  border: 1px solid #A1A1A1;
+  border-radius: 3px;
+  color: #000;
+}
+
+::-webkit-input-placeholder {
+   color: #A1A1A1;
+   font-size: 14px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #A1A1A1;  
+   font-size: 14px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #A1A1A1; 
+   font-size: 14px; 
+}
+
+:-ms-input-placeholder {  
+   color: #A1A1A1;
+   font-size: 14px;  
+}
+
+input:focus {
+  border: 1px solid #b2cffd;
+  outline-style: none;
+  background-color: #e5effe;
+}
+
+
+button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Francois One', sans-serif;
+
+}
+
+button:focus {
+  outline-style: none;
+}
+
+.main-cta {
+  margin: 5px auto 10px auto;
+  background-color: #fb327f;
+  font-weight: 900;
+
+}
+
+.main-cta:hover {
+  background-color: #fa0060;
+}
+
+.secondary-cta {
+  /*background-color: #feccdf;*/
+  height: 35px;
+  margin: 5px auto;
+  background-color: #7faffc;
+  font-size: 14px;
+}
+
+
+.secondary-cta:hover {
+ background-color: #92bbfc;
+}
+
+#guesses-remaining {
+  text-align: center;
+  font-family: 'Francois One', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 10px auto;
+
+}
+
+
+/*to appear after user guesses*/
+
+.game-status {
+  text-align: center;
+  font-family: 'Pacifico', sans-serif;
+  margin: 20px auto;
+  font-size: 18px;
+  color: #000;
+}
+
+#warm {
+  color: #fa0060;
+  display: none;
+}
+
+#cold {
+  color: #0056e1;
+  display: none;
+}
+
+#lose {
+  display: none;
+  width: 320px;
+}
+
+#win {
+  display: none;
+}
+
+
+.warm {
+  background-color: #fee5ef;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.cold {
+  background-color: #ccdffe;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.win {
+  background-color: #dffecc;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
