@@ -83,27 +83,39 @@ button:focus {
 }
 
 .main-cta {
-  margin: 5px auto 10px auto;
-  background-color: #fb327f;
+  margin: 5px auto 13px auto;
+  background-color: #fc6ba3; /*#fb327f;*/
   font-weight: 900;
+  box-shadow: 0 3px #da0456;
 
 }
 
 .main-cta:hover {
-  background-color: #fa0060;
+  background-color: #fc458b;
+}
+
+.main-cta:active {
+  box-shadow: 0 2px #da0456;
+  transform: translateY(1px);
 }
 
 .secondary-cta {
-  /*background-color: #feccdf;*/
   height: 35px;
   margin: 5px auto;
-  background-color: #7faffc;
+  background-color: #92bbfc;
   font-size: 14px;
+  box-shadow: 0 2px #1f73fa;
 }
 
 
 .secondary-cta:hover {
- background-color: #92bbfc;
+ background-color: #7faffc;
+
+}
+
+.secondary-cta:active {
+  box-shadow: 0 1px #1f73fa;
+  transform: translateY(1px);
 }
 
 #guesses-remaining {
