@@ -125,25 +125,23 @@ button:focus {
   margin: 20px auto;
   font-size: 18px;
   color: #000;
+  display: none;
 }
 
 #warm {
-  color: #fa0060;
-  display: none;
+  color: #ff498f;
 }
 
 #cold {
   color: #0056e1;
-  display: none;
 }
 
 #lose {
-  display: none;
   width: 320px;
 }
 
-#win {
-  display: none;
+#err {
+  color: #fa0060;
 }
 
 
