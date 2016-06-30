@@ -1,5 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 12px;
 }
 
 h1 {
@@ -22,13 +24,15 @@ h2 {
   text-align: center;
 }
 
+/* input styles */
+
 input {
   width: 198px;
   height: 50px;
   display: block;
   margin: 20px auto 0px auto;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   text-align: center;
   background-color: #FFF;
@@ -58,36 +62,42 @@ input {
 }
 
 input:focus {
-  border: 1px solid #b2cffd;
+  border-color: #b2cffd;
   outline-style: none;
   background-color: #e5effe;
 }
 
+/* button styles*/
 
 button {
   display: block;
   width: 200px;
-  height: 50px;
-  font-size: 18px;
   color: #000;
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
-  font-weight: 400;
   font-family: 'Francois One', sans-serif;
-
 }
 
 button:focus {
   outline-style: none;
 }
 
+button:active {
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  transform: translateY(1px);
+}
+
 .main-cta {
+  height: 50px;
   margin: 5px auto 13px auto;
-  background-color: #fc6ba3; /*#fb327f;*/
+  background-color: #fc6ba3;
+  font-size: 18px;
   font-weight: 900;
   box-shadow: 0 3px #da0456;
-
 }
 
 .main-cta:hover {
@@ -96,7 +106,6 @@ button:focus {
 
 .main-cta:active {
   box-shadow: 0 2px #da0456;
-  transform: translateY(1px);
 }
 
 .secondary-cta {
@@ -104,32 +113,26 @@ button:focus {
   margin: 5px auto;
   background-color: #92bbfc;
   font-size: 14px;
+  font-weight: 400;
   box-shadow: 0 2px #1f73fa;
 }
 
-
 .secondary-cta:hover {
  background-color: #7faffc;
-
 }
 
 .secondary-cta:active {
   box-shadow: 0 1px #1f73fa;
-  transform: translateY(1px);
 }
 
+/* status message styles (to appear after user submits guess) */
+
 #guesses-remaining {
-  text-align: center;
   font-family: 'Francois One', sans-serif;
-  font-size: 12px;
   text-transform: uppercase;
   text-decoration: underline;
   margin: 10px auto;
-
 }
-
-
-/*to appear after user guesses*/
 
 .game-status {
   text-align: center;
@@ -140,46 +143,40 @@ button:focus {
   display: none;
 }
 
-#warm {
+#warm-msg {
   color: #ff498f;
 }
 
-#cold {
+#cold-msg {
   color: #0056e1;
 }
 
-#lose {
-  width: 320px;
+#lose-msg {
+  width: 270px;
 }
 
-#err {
+#err-msg {
   color: #fa0060;
 }
 
+/* background styles (to be added depending on game status)*/
 
-.warm {
+.bg {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.warm-bg {
   background-color: #fee5ef;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
-.cold {
+.cold-bg {
   background-color: #ccdffe;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
-.win {
+.win-bg {
   background-color: #dffecc;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 }
