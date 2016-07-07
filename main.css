@@ -130,33 +130,16 @@ button:active {
 #guesses-remaining {
   font-family: 'Francois One', sans-serif;
   text-transform: uppercase;
-  text-decoration: underline;
   margin: 10px auto;
 }
 
-.game-status {
+#status-messages {
   text-align: center;
   font-family: 'Pacifico', sans-serif;
   margin: 20px auto;
   font-size: 18px;
   color: #000;
   display: none;
-}
-
-#warm-msg {
-  color: #ff498f;
-}
-
-#cold-msg {
-  color: #0056e1;
-}
-
-#lose-msg {
-  width: 270px;
-}
-
-#err-msg {
-  color: #fa0060;
 }
 
 /* background styles (to be added depending on game status)*/
@@ -169,12 +152,9 @@ button:active {
   transition: all 1s ease;
 }
 
-.warm-bg {
+.lose-bg {
   background-color: #fee5ef;
-}
-
-.cold-bg {
-  background-color: #ccdffe;
+  /*background-color: #fa0060;*/
 }
 
 .win-bg {

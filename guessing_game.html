@@ -6,8 +6,8 @@
     <title> Kayla Fuchs's Guessing Game </title>
     <link href="main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Pacifico|Open+Sans:300" rel="stylesheet">
-    <!-- This will eventually contain the javascript for the game: <script src="/functions.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="guessingGame.js"></script>
   </head>
   <body>
     <div id="headlines">
@@ -25,32 +25,15 @@
         Guess Now &rsaquo;
       </button>
       <button type="button" class="secondary-cta">
-        Guess a random number
+        Get a hint
       </button>
       <button type="button" class="secondary-cta">
         New game
       </button>
     </div>
-    <div id="status-messages">
-      <div id="warm-msg" class="game-status">
-        You're warm! Almost there
-      </div>
-      <div id="cold-msg" class="game-status">
-        You're cold, try again
-      </div>
-      <div id="lose-msg" class="game-status">
-        Sorry, you didn't outsmart me. Click above to play again.
-      </div>
-        <div id="win-msg" class="game-status">
-        Good guess! Bet you can't beat me twice though...
-      </div>
-      <div id="err-msg" class="game-status">
-        Please enter a number. 
-      </div>
-      <div id="guesses-remaining">
-        3 guesses remaining
-      </div>
+    <div id="status-messages" class="game-status">
+    </div>
+    <div id="guesses-remaining">
     </div>
   </body>
 </html>
-
