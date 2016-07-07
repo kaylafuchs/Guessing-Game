@@ -5,10 +5,11 @@
 	var winningNumber = generateWinningNumber();
 	var previousGuesses = [];
 	var guessesRemaining = 3;
+	var hintUsed = false;
 
 	// I tried to decrease the number of jQuery selectors used by declaring the variable below
 	// to equal the selector I used most often, but when I did that none of my functions worked anymore.
-	// Why is that? Shouldn't this variable be available to all the functions below?
+	// Why is that? Shouldn't this variable be available to all the functions below via closure?
 	// var statusMsg = $('#status-messages')
 
 	/* **** Guessing Game Functions **** */
@@ -32,27 +33,20 @@
 
 	}
 
-	//Check if guess is a repeat
-	function repeatGuess(previousGuesses, playersGuess){
-		return previousGuesses.indexOf(playersGuess) > -1;
-	}
-
-	//Find absolute distance between player's guess and winning number to nearest 10
+	//Tells user if their guess is high or low and if it's within 20 digits of the number or not
 	function distance(winningNumber, playersGuess){
-		return Math.abs(Math.floor((winningNumber - playersGuess) / 10) * 10);
+		return Math.abs(winningNumber - playersGuess) <= 20 ? "within 20 digits." : "more than 20 digits away."
 	}
 
+	// Tells user how close their guess is to the winning number
 	function guessMessage(){
-		return "Your guess is " + lowerOrHigher(playersGuess,winningNumber) + " and within " + distance(winningNumber,playersGuess) + " digits of the number.";
+		return "Your guess is " + lowerOrHigher(playersGuess,winningNumber) + " and " + distance(winningNumber,playersGuess);
 	}
 
 
 	// Check if the Player's Guess is the winning number 
 	function checkGuess(playersGuess, winningNumber){
 		var statusMsg = $('#status-messages');
-		var body = $('body')
-		var buttonsToDisable = $('button.main-cta, #game :nth-child(3)')
-
 		if (playersGuess === winningNumber){
 			youWin();
 		} else {
@@ -80,20 +74,25 @@
 	//changes to DOM if user wins
 	function youWin(){
 		$('button.main-cta, #game :nth-child(3)').prop('disabled',true);
-		$('#status-messages').text("You win! Bet you can't beat me again...").slideDown(100).css('color','#0056e1');
+		$('#status-messages').text("You win! Bet you can't beat me again though...").slideDown(100).css('color','#0056e1');
 		$('body').addClass('bg win-bg');	
 	}
 	
-	// Create a provide hint button that provides additional clues to the "Player"
+	// Create a provide hint button that provides additional clues to the user
 	function provideHint(){
-		$('#status-messages').text("I'm thinking of one of these numbers: " + Math.floor(Math.random() * 100) + ", "+ Math.floor(Math.random() * 100) + ", " +winningNumber);
+		var statusMsg = $('#status-messages');
+		if (hintUsed == false){
+			statusMsg.text("I'm thinking of one of these numbers: " + Math.floor(Math.random() * 100) + ", "+ Math.floor(Math.random() * 100) + ", " + winningNumber).slideDown(100);
+			hintUsed = true;	
+		} else {
+			statusMsg.text("Sorry, I only give one hint per game.").slideDown(100);
+		}
 	}
 
 	// Allow the "Player" to Play Again
 	function playAgain(){
 		window.location.reload(true);
 	}
-
 
 
 	/* **** Event Listeners/Handlers ****  */
