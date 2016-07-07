@@ -102,8 +102,6 @@
 		$('button.main-cta').on('click',function(event){
 			if ($('input').val().length > 0 && guessesRemaining > 0){
 				playersGuessSubmission();
-			} else if (guessesRemaining <= 0){
-				$('button.main-cta, #game :last-child').prop('disabled',true);
 			}
 		})
 
